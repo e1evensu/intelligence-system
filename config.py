@@ -1,8 +1,9 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'))
 
+# GitHub API
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
 GH_API_BASE = 'https://api.github.com'
 

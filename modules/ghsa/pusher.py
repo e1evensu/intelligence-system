@@ -1,6 +1,8 @@
 """Pusher: 上传 HTML 到 OSS"""
 import oss2
-from config import (OSS_ENDPOINT, OSS_BUCKET, OSS_ACCESS_KEY_ID, 
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
+from config import (OSS_ENDPOINT, OSS_BUCKET, OSS_ACCESS_KEY_ID,
                     OSS_ACCESS_KEY_SECRET, OSS_ENABLED, OSS_PREFIX)
 
 def upload_to_oss(local_path: str, remote_name: str) -> str:

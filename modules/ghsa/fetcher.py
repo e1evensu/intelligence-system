@@ -2,6 +2,8 @@
 import re
 import httpx
 from datetime import datetime, timedelta, timezone
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 from config import GH_API_BASE, GITHUB_TOKEN, HOURS_WINDOW, MIN_SEVERITY
 
 HEADERS = {

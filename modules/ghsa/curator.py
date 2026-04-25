@@ -3,6 +3,8 @@ import re
 import json
 import httpx
 from datetime import datetime, timedelta, timezone
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 from config import (HOURS_WINDOW, GH_API_BASE, GITHUB_TOKEN,
                     SILICONFLOW_API_KEY, SILICONFLOW_API_BASE, SILICONFLOW_MODEL)
 

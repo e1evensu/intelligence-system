@@ -1,6 +1,8 @@
 """Analyzer: 用 SiliconFlow API 做深度中文漏洞分析"""
 import json
 import httpx
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 from config import SILICONFLOW_API_KEY, SILICONFLOW_API_BASE, SILICONFLOW_MODEL
 
 def analyze_vulnerability(item: dict, commit_diff: str = '') -> dict:
